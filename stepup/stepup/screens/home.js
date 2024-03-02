@@ -15,6 +15,11 @@ import {
   import {createBottomTabNavigator}  from '@react-navigation/bottom-tabs';
   import Ionicons from '@expo/vector-icons/Ionicons';
   import {React} from 'react';
+import Profile from './profile';
+import Budget from './budget';
+import Mfunds from './mfunds';
+import Module from './module';
+  
 
   
   const Tab = createBottomTabNavigator();
