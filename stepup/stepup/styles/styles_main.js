@@ -4,6 +4,7 @@ import { useFonts } from 'expo-font';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#fff',
   },
 
   text: {
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
   logo: {
     width: 50,
     height: 50,
-    marginLeft: 20,
+    marginLeft: 25,
     marginTop: 45,
     alignSelf: 'flex-start'
   },

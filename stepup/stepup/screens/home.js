@@ -1,4 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
+import { MaterialIcons } from '@expo/vector-icons';
 
 import { 
   StyleSheet, 
@@ -17,8 +18,11 @@ import {
   import {React} from 'react';
 import Profile from './profile';
 import Budget from './budget';
+
+
 import Mfunds from './mfunds';
 import Module from './module';
+import Dashboard from './dashboard';
   
 
   
@@ -30,7 +34,7 @@ export default function Home() {
 
   return (
       <Tab.Navigator 
-      initialRouteName='feed'
+      initialRouteName='dashbord'
       screenOptions={{
         headerShown:false,
         tabBarActiveTintColor:'red',
@@ -46,7 +50,7 @@ export default function Home() {
               return <Ionicons name="home-outline" size={30} color="grey"/>
             }
           },
-        }} name="feed" component={Budget}/>
+        }} name="feed" component={Dashboard}/>
 
         <Tab.Screen options={{
           tabBarShowLabel:false,

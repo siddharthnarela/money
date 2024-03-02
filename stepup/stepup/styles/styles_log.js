@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     position: 'fixed',
+    backgroundColor: '#fff',
   },
 
   text: {
@@ -62,7 +63,6 @@ const styles = StyleSheet.create({
     bottom: 40,
     alignSelf: 'flex-start',
     marginLeft: 85,
-    fontFamily: 'TechnicBold',
   },
 });
 

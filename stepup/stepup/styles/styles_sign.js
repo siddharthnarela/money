@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    marginTop: 85,
+    backgroundColor: '#fff',
   },
 
   text: {
@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
   logo: {
     width: 50,
     height: 50,
+    marginTop: 65,
     marginLeft: 30,
     alignSelf: 'flex-start'
   },
