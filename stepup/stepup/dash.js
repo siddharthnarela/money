@@ -66,14 +66,14 @@ export default function Dash({ route }) {
               value={enteredAmount}
               onChangeText={(text) => setEnteredAmount(text)}
             />
-            <View style={styles.buttonContainer}>
-              <TouchableOpacity style={styles.addMoneyButton} onPress={handleAddMoney}>
-                <Text style={styles.addMoneyButtonText}>Add Money</Text>
-              </TouchableOpacity>
             </View>
+            <View style={styles.buttonContainer}>
+  <TouchableOpacity style={styles.addMoneyButton} onPress={handleAddMoney}>
+    <Text style={styles.addMoneyButtonText}>Add Money</Text>
+  </TouchableOpacity>
+</View>
           </View>
         </View>
-      </View>
     </ScrollView>
   );
 }
