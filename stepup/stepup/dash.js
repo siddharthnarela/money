@@ -12,7 +12,6 @@ export default function Dash({ route }) {
   const navigation = useNavigation();
 
   const [isFontsLoaded] = useFonts({
-    // Add your font imports here
   });
 
   const [enteredAmount, setEnteredAmount] = useState('');
@@ -21,6 +20,9 @@ export default function Dash({ route }) {
   useEffect(() => {
   }, [isFontsLoaded]);
 
+  const BankIcon = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="logout"><path d="M12.59,13l-2.3,2.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l4-4a1,1,0,0,0,.21-.33,1,1,0,0,0,0-.76,1,1,0,0,0-.21-.33l-4-4a1,1,0,1,0-1.42,1.42L12.59,11H3a1,1,0,0,0,0,2ZM12,2A10,10,0,0,0,3,7.55a1,1,0,0,0,1.8.9A8,8,0,1,1,12,20a7.93,7.93,0,0,1-7.16-4.45,1,1,0,0,0-1.8.9A10,10,0,1,0,12,2Z"></path></svg>
+`;
   const handleAddMoney = () => {
     if (!enteredAmount || isNaN(enteredAmount)) {
       // Display a toast message for no input on amount
@@ -78,6 +80,22 @@ export default function Dash({ route }) {
 
   return (
     <ScrollView style={[styles.scrollContainer, { backgroundColor: '#FFFFFF' }]}>
+      <View style={styles.cardscontainer}>
+            <LinearGradient
+              colors={['#677', 'black']}
+              style={styles.credits_card}
+            >
+              <Text style={styles.credits}>Credits     Available</Text>
+              <Text style={styles.creditsval}>321</Text>
+            </LinearGradient>
+            <LinearGradient
+              colors={['#677', 'black']}
+              style={styles.modules_card}
+            >
+              <Text style={styles.modules}>Modules Completed</Text>
+              <Text style={styles.modulesval}>5</Text>
+            </LinearGradient>
+          </View>
       <View style={[styles.Imgcontainer, { marginVertical: isFocused ? 20 : 0 }]}>
         <View style={styles.container}>
           <View style={styles.portcard}>

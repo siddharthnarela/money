@@ -140,7 +140,7 @@ addMoneyButtonText: {
 
 credits_card: {
   width: '47%',
-  height: 140,
+  height: 220,
   borderRadius: 22,
 },
 
@@ -161,7 +161,8 @@ creditsval: {
 
 modules_card: {
   width: '47%',
-  height: 140,
+  height: 220,
+  marginLeft:"3%",
   borderRadius: 22,
 },
 

@@ -17,7 +17,7 @@ export default function Start( ) {
   }
 
   const handleButtonPress = () => {
-    navigation.navigate('Profile', { hideHeader: true });
+    navigation.navigate('Home1', { hideHeader: true });
   };
 
   return (
