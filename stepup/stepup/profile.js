@@ -115,24 +115,29 @@ const EditIcon = `
   return (
     <ScrollView style={styles.scrollContainer}>
       <View style={[styles.Imgcontainer, { marginVertical: isFocused ? 20 : 0 }]}>
-        <Image source={require('./profile/profile.jpg')} style={styles.profileImage} />
         <View style={styles.container}>
           <Text style={styles.text}>Welcome Aditya!</Text>
           <Text style={styles.text1}>Hope You are having a good day!</Text>
-          <Text style={styles.space}> </Text>
+          <View style={styles.balancecard}>
+          <Text style={styles.balancetext}>Account Balance</Text>
+          <Text style={styles.balance}>$32,341.59</Text>
+          </View>
+          <Text style={styles.space}></Text>
           <Text style={styles.text}>Recent Stats!</Text>
-          <View style={styles.accountBalanceContainer}>
+          <View style={styles.cardscontainer}>
             <LinearGradient
-              colors={['#24c6dc', '#514a9d']}
-              style={styles.bal_card}
+              colors={['#677', 'black']}
+              style={styles.credits_card}
             >
-              <Text style={styles.bal_text}></Text>
+              <Text style={styles.credits}>Credits     Available</Text>
+              <Text style={styles.creditsval}>321</Text>
             </LinearGradient>
             <LinearGradient
-              colors={['#24c6dc', '#514a9d']}
-              style={styles.bal_card2}
+              colors={['#677', 'black']}
+              style={styles.modules_card}
             >
-              <Text style={styles.bal_text}></Text>
+              <Text style={styles.modules}>Modules Completed</Text>
+              <Text style={styles.modulesval}>5</Text>
             </LinearGradient>
           </View>
           <View style={styles.redirectorsContainer}>

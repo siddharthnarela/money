@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
+    backgroundColor: '#fff',
   },
 
   text: {
@@ -50,7 +51,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 180,
     left: 30,
-    fontFamily: 'TechnicBold',
   },
 
   pp: {

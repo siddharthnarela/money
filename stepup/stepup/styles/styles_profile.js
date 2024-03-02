@@ -1,15 +1,13 @@
 import { StyleSheet } from 'react-native';
-import { useFonts } from 'expo-font';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 130,
+    paddingTop: 20, 
   },
 
   Imgcontainer: {
     flex: 1,
-    marginTop: 60,
   },
 
   text: {
@@ -17,6 +15,7 @@ const styles = StyleSheet.create({
     marginLeft: 30,
     fontWeight: 'bold',
   },
+
   text1: {
     fontSize: 15,
     marginTop: 6,
@@ -30,7 +29,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 180,
     left: 30,
-    fontFamily: 'TechnicBold',
   },
 
   space: {
@@ -46,6 +44,7 @@ const styles = StyleSheet.create({
     marginTop: 20, 
     alignSelf: 'center',
   },
+
   buttonText: {
     color: 'white',
     fontSize: 16,
@@ -57,9 +56,8 @@ const styles = StyleSheet.create({
     alignItems: 'center', 
   },
 
-  accountBalanceContainer: {
+  cardscontainer: {
     marginTop: 24,
-    alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
@@ -72,36 +70,49 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
 
-  bal_card: {
+  credits_card: {
     width: '47%',
-    height: 240,
+    height: 140,
     borderRadius: 22,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 
-  bal_card2: {
-    width: '47%',
-    height: 240,
-    borderRadius: 22,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-
-  bal_text: {
+  credits: {
     color: 'white',
     fontSize: 16,
+    marginLeft: 25,
+    marginTop: 20,
     fontWeight: 'bold',
   },
-  
-  profileImage: {
-    width: 100, 
-    height: 100,
-    borderRadius: 50, 
+  creditsval: {
+    color: 'white',
+    fontSize: 32,
     marginLeft: 25,
-    position: 'absolute',
-    top: 10, 
+    marginTop: 6,
+    fontWeight: 'bold',
   },
+
+  modules_card: {
+    width: '47%',
+    height: 140,
+    borderRadius: 22,
+  },
+
+  modules: {
+    color: 'white',
+    fontSize: 16,
+    marginLeft: 25,
+    marginTop: 20,
+    fontWeight: 'bold',
+  },
+
+  modulesval: {
+    color: 'white',
+    fontSize: 32,
+    marginLeft: 25,
+    marginTop: 6,
+    fontWeight: 'bold',
+  },
+
   redirectorsContainer: {
     backgroundColor: '#ECECEC',
     width: '90%',
@@ -110,6 +121,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     borderRadius: 25,
   },
+
   redirector: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -117,15 +129,44 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
   },
+
   redirectorText: {
     marginLeft: 10,
     fontSize: 16,
   },
+
   icon: {
     width: 25,
     height: 25,
     marginLeft: 10,
   },
+
+  balancecard: {
+    height: "15%",
+    alignSelf: 'center',
+    width: '85%',
+    borderRadius: 15,
+    backgroundColor: 'black',
+    marginTop: 15, 
+  },
+
+  balancetext: {
+    color: 'white',
+    fontSize: 16,
+    marginLeft: 25, 
+    marginTop: 20,
+    fontWeight: 'bold',
+},
+
+balance: {
+  color: 'white',
+  fontSize: 16,
+  marginLeft: 25, 
+  marginTop: 5,
+  fontSize: 32,
+  fontWeight: 'bold',
+},
+
 });
 
 export default styles;
