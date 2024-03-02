@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { LinearGradient } from 'expo-linear-gradient';
 
+
 import { 
   StyleSheet, 
   Text, 
@@ -14,66 +15,30 @@ import {
   TouchableNativeFeedback,
   SafeAreaView} from 'react-native';
   import {React} from 'react';
+import ModuleCard from '../components/moduleCard';
   
-export default function Mfunds({navigation}) {
+export default function Wallet({navigation}) {
 
 
   return (
-    <SafeAreaView style={styles.container}>
-        
-    </SafeAreaView>
+    <View>
+    <ModuleCard/>
+      </View>
+    
+    
     
   )
 }
 
 const styles = StyleSheet.create({
-  container:{
-    flex:1, 
-    backgroundColor:'#fff',
-    // alignItems:'center',
-    // justifyContent:'center',
-    
-  },
-  
-  profile:{
-    width:'100%',
-    height:500,
-    display:'flex',
-    flexDirection:'column',
+  wallet:{
+    height:300,
+    width:350,
+    borderRadius:40,
     alignItems:'center',
-    padding:50,
-    top:-20,
-    // alignItems:'flex-start',
-    // top:50,
-    
-  },
-
-  header:{
-    backgroundColor:'#191717',
-    display:'flex',
-    flexDirection:'row',
     justifyContent:'center',
-    height:50,
-    alignItems:'center',
-    width:'100%',
-    borderBottomEndRadius:100,
-    borderBottomStartRadius:100,
-    marginBottom:10,
-
-  },
-
-  logo:{
-    width:150,
-  },
-  card2:{
-    width:320,
-    height:520,
-    borderRadius:15,
-    padding:10,
-    display:'flex',
-    flexDirection:'column',
-    justifyContent:'space-evenly',
-    alignItems:'center',
-  },
+    marginTop:100,   /////
+    marginLeft:20     //////
+  }
 });
 
