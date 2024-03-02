@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { LinearGradient } from 'expo-linear-gradient';
 
-
 import { 
   StyleSheet, 
   Text, 
@@ -21,9 +20,6 @@ export default function Mfunds({navigation}) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-            <Image source={require('./assets/logo2.png')} resizeMode='contain' style={styles.logo} />
-        </View>
         <View style={styles.profile}>
         <LinearGradient
             colors={['#29323c','#485563']}
@@ -31,7 +27,6 @@ export default function Mfunds({navigation}) {
             end={{ x: 1, y: 0 }}
             style={styles.card2}>
 
-            <Image style={{width:200, height:200, borderRadius:100,}} source={require('./assets/postLogo.png')} />
             <View style={{display:'flex',height:200, flexDirection:'column',justifyContent:'space-between', alignItems:'center'}}>
                 <Text style={{fontSize:20, color:'white', fontWeight:'bold'}}>Username  :  userName</Text>
                 <Text style={{fontSize:20, color:'white', fontWeight:'bold'}}>Username  :  Unknown</Text>

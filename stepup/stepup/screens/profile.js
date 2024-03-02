@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { LinearGradient } from 'expo-linear-gradient';
-
-
+import logo2 from '../assets/logo2.png';
 import { 
   StyleSheet, 
   Text, 
@@ -22,7 +21,6 @@ export default function Profile({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-            <Image source={require('./assets/logo2.png')} resizeMode='contain' style={styles.logo} />
         </View>
         <View style={styles.profile}>
         <LinearGradient

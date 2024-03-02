@@ -31,7 +31,7 @@ export default function Start() {
       });
     } else {
       try {
-        navigation.navigate('Screen1', { hideHeader: true });
+        navigation.navigate('Mfunds', { hideHeader: true });
       } catch (error) {
         console.error('Authentication Error:', error.message);
         Toast.show({
