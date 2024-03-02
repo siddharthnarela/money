@@ -1,4 +1,3 @@
-// TopTabs.js
 import React from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Dash from './dash';
@@ -11,9 +10,15 @@ const TopTabs = () => {
   return (
     <>
       <HeaderBar title="StepUp" />
-      <Tab.Navigator>
+      <Tab.Navigator
+        tabBarOptions={{
+          indicatorStyle: { backgroundColor: 'green' },
+          activeTintColor: 'black',
+          inactiveTintColor: 'grey',
+        }}
+      >
+        <Tab.Screen name="Dashboard" component={Dash} />
         <Tab.Screen name="Profile" component={Profile} />
-        <Tab.Screen name="Dash" component={Dash} />
       </Tab.Navigator>
     </>
   );

@@ -8,7 +8,6 @@ import { useIsFocused } from '@react-navigation/native';
 import { SvgXml } from 'react-native-svg';
 import { useNavigation } from '@react-navigation/native';
 import 'react-native-gesture-handler';
-import HeaderBar from './HeaderBar';
 
 export default function Dash() {
   const isFocused = useIsFocused();
@@ -119,6 +118,7 @@ const EditIcon = `
       <View style={[styles.Imgcontainer, { marginVertical: isFocused ? 20 : 0 }]}>
         <View style={styles.container}>
           <Text style={styles.text}>Welcome Aditya!</Text>
+          <Text style={styles.text1}>username: afk_adi</Text>
           <Text style={styles.text1}>Hope You are having a good day!</Text>
           <View style={styles.balancecard}>
           <Text style={styles.balancetext}>Account Balance</Text>
