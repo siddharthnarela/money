@@ -87,16 +87,48 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
 },
 
+portmod: {
+  color: 'black',
+  fontSize: 16,
+  marginLeft: 25, 
+  marginTop: 20,
+  marginBottom: "8%",
+  fontWeight: 'bold',
+},
+
 balance: {
   color: 'black',
   fontSize: 16,
   marginLeft: 25, 
   marginTop: 5,
-  marginBottom:"3%",
   fontSize: 32,
   fontWeight: 'bold',
 },
 
+amountInput: {
+  height: 40,
+  width: "80%",
+  alignSelf: 'center',
+  borderColor: 'gray',
+  borderWidth: 1,
+  marginTop: 20,
+  borderRadius: 8,
+  marginBottom: 16,
+  paddingHorizontal: 8,
+},
+addMoneyButton: {
+  backgroundColor: '#4CAF50',
+  width:"30%",
+  padding: 10,
+  borderRadius: 8,
+  marginTop: 22,
+  alignSelf: 'center',
+  alignItems: 'center',
+},
+addMoneyButtonText: {
+  color: 'white',
+  fontSize: 16,
+},
 });
 
 export default styles;

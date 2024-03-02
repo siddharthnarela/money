@@ -1,21 +1,19 @@
 //profile.js
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, Image, SafeAreaView, TouchableHighlight, TouchableOpacity, ScrollView } from 'react-native';
 import { useFonts } from 'expo-font';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './styles/styles_profile';
 import { useIsFocused } from '@react-navigation/native';
 import { SvgXml } from 'react-native-svg';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import 'react-native-gesture-handler';
 
 export default function Dash() {
   const isFocused = useIsFocused();
   const navigation = useNavigation();
+  const route = useRoute();
 
-  const [isFontsLoaded] = useFonts({
-    TechnicBold: require('./assets/fonts/TechnicBold.ttf'),
-  });
   const logoutIcon = `
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="logout"><path d="M12.59,13l-2.3,2.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l4-4a1,1,0,0,0,.21-.33,1,1,0,0,0,0-.76,1,1,0,0,0-.21-.33l-4-4a1,1,0,1,0-1.42,1.42L12.59,11H3a1,1,0,0,0,0,2ZM12,2A10,10,0,0,0,3,7.55a1,1,0,0,0,1.8.9A8,8,0,1,1,12,20a7.93,7.93,0,0,1-7.16-4.45,1,1,0,0,0-1.8.9A10,10,0,1,0,12,2Z"></path></svg>
 `;
@@ -97,33 +95,38 @@ const EditIcon = `
 </svg>
 `;
 
-  useEffect(() => {
-  }, [isFontsLoaded]);
+const [isFontsLoaded] = useFonts({
+  // Add your font imports here
+});
 
-  const handleRedirect = (routeName) => {
-    // Add navigation logic here to redirect to the specified route
-    console.log(`Redirecting to ${routeName}`);
-  };
+const [currentBalance, setCurrentBalance] = useState(0); // Set initial balance to 0
 
-  const handleButtonPress = () => {
-    navigation.navigate('Start', { hideHeader: true });
-  };
-
-  if (!isFontsLoaded) {
-    return null;
+useEffect(() => {
+  if (route.params?.updatedBalance !== undefined) {
+    setCurrentBalance(route.params.updatedBalance);
   }
+}, [route.params?.updatedBalance]);
 
-  return (
-    <ScrollView style={styles.scrollContainer}>
-      <View style={[styles.Imgcontainer, { marginVertical: isFocused ? 20 : 0 }]}>
-        <View style={styles.container}>
-          <Text style={styles.text}>Welcome Aditya!</Text>
-          <Text style={styles.text1}>username: afk_adi</Text>
-          <Text style={styles.text1}>Hope You are having a good day!</Text>
-          <View style={styles.balancecard}>
+const handleButtonPress = () => {
+  // Add logic for handling button press
+  console.log('Button pressed!');
+  // Add navigation logic if needed
+};
+
+if (!isFontsLoaded) {
+  return null;
+}
+
+return (
+  <ScrollView style={styles.scrollContainer}>
+    <View style={[styles.Imgcontainer, { marginVertical: isFocused ? 20 : 0 }]}>
+      <View style={styles.container}>
+        <Text style={styles.text}>Welcome Aditya!</Text>
+        <Text style={styles.text1}>Hope You are having a good day!</Text>
+        <View style={styles.balancecard}>
           <Text style={styles.balancetext}>Account Balance</Text>
-          <Text style={styles.balance}>$32,341.59</Text>
-          </View>
+          <Text style={styles.balance}>${currentBalance.toFixed(2)}</Text>
+        </View>
           <Text style={styles.space}></Text>
           <Text style={styles.text}>Recent Stats!</Text>
           <View style={styles.cardscontainer}>
