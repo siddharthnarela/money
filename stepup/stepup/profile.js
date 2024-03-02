@@ -8,10 +8,10 @@ import { useIsFocused } from '@react-navigation/native';
 import { SvgXml } from 'react-native-svg';
 import { useNavigation } from '@react-navigation/native';
 import 'react-native-gesture-handler';
+import HeaderBar from './HeaderBar';
 
 export default function Dash() {
   const isFocused = useIsFocused();
-
   const [isFontsLoaded] = useFonts({
     TechnicBold: require('./assets/fonts/TechnicBold.ttf'),
   });
