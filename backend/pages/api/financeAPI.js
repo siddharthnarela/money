@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { db } from '../../config/firebase';
-import { collection, doc, onSnapshot, orderBy, query, updateDoc, where } from 'firebase/firestore';
+
 import Invest from './invest';
+import Sell from './sell';
 
 //IMPORTS FROM USER- EMAIL ID UNITS AND CASH OF USER
 function FinanceModule({id, cash, email, userunits}) {
@@ -12,10 +12,8 @@ function FinanceModule({id, cash, email, userunits}) {
   const [name, setName] = useState(null);
   const [price, setPrice] = useState(0);
 
-  const [userprice, setUserprice] = useState(0);
-  const [units, setUnits] = useState(0);
 
-  const [data, setData] = useState([]);
+
 
   let url = `https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/v2/get-quotes?region=IN&symbols=`;
   const options = {
@@ -45,59 +43,7 @@ function FinanceModule({id, cash, email, userunits}) {
     }
   }
 
-  const deductCashFromUserDatabase = async () => {
-    await updateDoc(doc(db, 'userinfo', id), {
-        cash: cash-userprice
-    })
-  }
-
-  const addDataInPortfolioDatabase = async () => {
-
-    // const data = [];
-
-    // const q = query(collection(db, 'userinfo'), where("useremail", "==", email));
-    //     const un = onSnapshot(q, snapshot => {
-    //         data.push(snapshot.docs.map(doc => ({...doc.data(), id: doc.id})))
-    // })
-
-    // console.log(data['useremail']);
-
-    await updateDoc(doc(db, 'userinfo', id), {
-        company : HDFCSYMBOL,
-        purchasePrice :  price,
-        units:  userprice/price
-    })
-    .then(user => {console.log("ADDED")})
-    .catch(err => {console.log("ERROR")})
-}
-
-const checkIfAlreadyInvested = () => {
-    if(userunits > 0)
-    {
-        console.log("ALREADY INVESTED.")
-    }
-    else 
-    {
-        invest();
-    }
-
-}
-
-  const invest = () => {
-    if(userprice < cash && userprice != 0)
-    {
-        let units = userprice/price;
-        setUnits(units);
-        deductCashFromUserDatabase();       
-        setUserprice(0); 
-        addDataInPortfolioDatabase();
-        console.log("PURCHASED")
-    }
-    else {
-        console.log("NOT PURCHASED")
-    }
-  }
-
+  
 
   return (
     <div className="App">
@@ -109,15 +55,8 @@ const checkIfAlreadyInvested = () => {
       {name && 
         <div>
           <h1>Price: {price}</h1>
-          <input type='number' placeholder='Enter number' 
-          onChange={e => {setUserprice(e.target.value)}}
-          value={userprice} />
-          <button onClick={() => {
-                checkIfAlreadyInvested();
-            }}>Invest</button>
-          
-          <Invest id={id}/>
-          <p>Units: {units}</p>
+          <Invest cash={cash} id={id} userunits={userunits} company={HDFCSYMBOL} price={price}/>
+          <Sell userunits={userunits} id={id} purchasePrice={price} company={HDFCSYMBOL}/>
         </div>
       }
 
