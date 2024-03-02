@@ -29,7 +29,7 @@ export default function Profile({navigation}) {
             end={{ x: 1, y: 0 }}
             style={styles.card2}>
 
-            <Image style={{width:200, height:200, borderRadius:100,}} source={require('./assets/postLogo.png')} />
+            
             <View style={{display:'flex',height:200, flexDirection:'column',justifyContent:'space-between', alignItems:'center'}}>
                 <Text style={{fontSize:20, color:'white', fontWeight:'bold'}}>Username  :  userName</Text>
                 <Text style={{fontSize:20, color:'white', fontWeight:'bold'}}>Username  :  Unknown</Text>
