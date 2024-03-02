@@ -108,9 +108,8 @@ useEffect(() => {
 }, [route.params?.updatedBalance]);
 
 const handleButtonPress = () => {
-  // Add logic for handling button press
+  navigation.navigate('Start', { hideHeader: true });
   console.log('Button pressed!');
-  // Add navigation logic if needed
 };
 
 if (!isFontsLoaded) {
