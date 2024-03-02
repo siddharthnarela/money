@@ -19,6 +19,7 @@ import {
 import Profile from './profile';
 import Budget from './budget';
 
+
 import Mfunds from './mfunds';
 import Module from './module';
 import Dashboard from './dashboard';
@@ -44,7 +45,7 @@ export default function Home() {
           tabBarShowLabel:false,
           tabBarIcon : ({focused}) => {
             if(focused){
-              return <MaterialIcons name="space-dashboard" style={styles.tab_button} size={35} color="#131834"/>
+              return <Ionicons name="home" style={styles.tab_button} size={35} color="#131834"/>
             }else{
               return <Ionicons name="home-outline" size={30} color="grey"/>
             }

@@ -15,13 +15,26 @@ import {
   TouchableNativeFeedback,
   SafeAreaView} from 'react-native';
   import {React} from 'react';
+  import Wallet from '../components/wallet';
   
 export default function Dashboard({navigation}) {
 
 
   return (
     <SafeAreaView style={styles.container}>
-      
+      <View style={styles.headerContainer}>
+        <View style={styles.walletContainer}>
+          <View style={styles.walletTextContainer}>
+            <Wallet/>
+
+          </View>
+        </View>
+
+        <View>
+
+        </View>
+      </View>
+    <StatusBar hidden={false} />
     </SafeAreaView>
     
   )
