@@ -1,16 +1,16 @@
-// Your main component file
-
+//profile.js
 import React, { useEffect } from 'react';
-import { View, Text, Image, TouchableHighlight, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, Image, SafeAreaView, TouchableHighlight, TouchableOpacity, ScrollView } from 'react-native';
 import { useFonts } from 'expo-font';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './styles/styles_profile';
+import { useIsFocused } from '@react-navigation/native';
 import { SvgXml } from 'react-native-svg';
 import { useNavigation } from '@react-navigation/native';
 import 'react-native-gesture-handler';
 
-export default function Profile() {
-  const navigation = useNavigation();
+export default function Dash() {
+  const isFocused = useIsFocused();
 
   const [isFontsLoaded] = useFonts({
     TechnicBold: require('./assets/fonts/TechnicBold.ttf'),
@@ -114,7 +114,7 @@ const EditIcon = `
 
   return (
     <ScrollView style={styles.scrollContainer}>
-      <View style={styles.Imgcontainer}>
+      <View style={[styles.Imgcontainer, { marginVertical: isFocused ? 20 : 0 }]}>
         <Image source={require('./profile/profile.jpg')} style={styles.profileImage} />
         <View style={styles.container}>
           <Text style={styles.text}>Welcome Aditya!</Text>

@@ -1854,6 +1854,11 @@
   resolved "https://registry.npmjs.org/@react-native-community/masked-view/-/masked-view-0.1.11.tgz"
   integrity sha512-rQfMIGSR/1r/SyN87+VD8xHHzDYeHaJq6elOSCAD+0iLagXkSI2pfA0LmSXP21uw5i3em7GkkRjfJ8wpqWXZNw==
 
+"@react-native-community/viewpager@^5.0.11":
+  version "5.0.11"
+  resolved "https://registry.npmjs.org/@react-native-community/viewpager/-/viewpager-5.0.11.tgz"
+  integrity sha512-eboJwbDQjP1qJP3LFzVspgh88IGNF07S2qpU296j+4kL0inVuL+HXs81SuczMGtJmDZ4u19RNEBVq79of/h+jQ==
+
 "@react-native-firebase/app@^19.0.0", "@react-native-firebase/app@19.0.0":
   version "19.0.0"
   resolved "https://registry.npmjs.org/@react-native-firebase/app/-/app-19.0.0.tgz"
@@ -2043,6 +2048,14 @@
   version "1.3.26"
   resolved "https://registry.npmjs.org/@react-navigation/elements/-/elements-1.3.26.tgz"
   integrity sha512-9rSY7MD6etU3M3j/OYUvtg4eBqABlkS39iJwwQheE89pSa9QyvXbJSsz/bUBEjFWwsOYxTVzj27bc7ulrDVWgw==
+
+"@react-navigation/material-top-tabs@^6.6.10":
+  version "6.6.10"
+  resolved "https://registry.npmjs.org/@react-navigation/material-top-tabs/-/material-top-tabs-6.6.10.tgz"
+  integrity sha512-OlwgIXFaVJrifmiVfAadZnBJ7wbW8h/bQfWYYU3oK14h3L5Kk7Pix2taXfb3+s7ys2ljIx5RIdPHwVlsT4JGNg==
+  dependencies:
+    color "^4.2.3"
+    warn-once "^0.1.0"
 
 "@react-navigation/native@^6.0.0", "@react-navigation/native@^6.1.14":
   version "6.1.14"
@@ -5889,6 +5902,11 @@ react-native-navigation@^7.38.3:
     react-lifecycles-compat "2.0.0"
     tslib "1.9.3"
 
+react-native-pager-view@*, "react-native-pager-view@>= 4.0.0":
+  version "6.2.3"
+  resolved "https://registry.npmjs.org/react-native-pager-view/-/react-native-pager-view-6.2.3.tgz"
+  integrity sha512-dqVpXWFtPNfD3D2QQQr8BP+ullS5MhjRJuF8Z/qml4QTILcrWaW8F5iAxKkQR3Jl0ikcEryG/+SQlNcwlo0Ggg==
+
 react-native-ratings@8.0.4:
   version "8.0.4"
   resolved "https://registry.npmjs.org/react-native-ratings/-/react-native-ratings-8.0.4.tgz"
@@ -5896,10 +5914,10 @@ react-native-ratings@8.0.4:
   dependencies:
     lodash "^4.17.15"
 
-react-native-reanimated@^3.7.1:
-  version "3.7.1"
-  resolved "https://registry.npmjs.org/react-native-reanimated/-/react-native-reanimated-3.7.1.tgz"
-  integrity sha512-bapCxhnS58+GZynQmA/f5U8vRlmhXlI/WhYg0dqnNAGXHNIc+38ahRWcG8iK8e0R2v9M8Ky2ZWObEC6bmweofg==
+react-native-reanimated@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.npmjs.org/react-native-reanimated/-/react-native-reanimated-3.7.2.tgz"
+  integrity sha512-3KpTmYEcmHhkZeTqgWtioqnljpd4TLxKHClvarYsA3UXU2Tv+O1gqlRhVhfHBZuiDngVu436gWkde9+/VQVMFQ==
   dependencies:
     "@babel/plugin-transform-object-assign" "^7.16.7"
     "@babel/preset-typescript" "^7.16.7"
@@ -5931,6 +5949,13 @@ react-native-svg@^15.0.0:
   dependencies:
     css-select "^5.1.0"
     css-tree "^1.1.3"
+
+react-native-tab-view@^3.5.2, "react-native-tab-view@>= 3.0.0":
+  version "3.5.2"
+  resolved "https://registry.npmjs.org/react-native-tab-view/-/react-native-tab-view-3.5.2.tgz"
+  integrity sha512-nE5WqjbeEPsWQx4mtz81QGVvgHRhujTNIIZiMCx3Bj6CBFDafbk7XZp9ocmtzXUQaZ4bhtVS43R4FIiR4LboJw==
+  dependencies:
+    use-latest-callback "^0.1.5"
 
 react-native-toast-message@^2.2.0:
   version "2.2.0"
@@ -7038,7 +7063,7 @@ url-parse@^1.5.9:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
 
-use-latest-callback@^0.1.7:
+use-latest-callback@^0.1.5, use-latest-callback@^0.1.7:
   version "0.1.9"
   resolved "https://registry.npmjs.org/use-latest-callback/-/use-latest-callback-0.1.9.tgz"
   integrity sha512-CL/29uS74AwreI/f2oz2hLTW7ZqVeV5+gxFeGudzQrgkCytrHw33G4KbnQOrRlAEzzAFXi7dDLMC9zhWcVpzmw==
