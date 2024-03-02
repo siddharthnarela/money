@@ -12,6 +12,7 @@ import HeaderBar from './HeaderBar';
 
 export default function Dash() {
   const isFocused = useIsFocused();
+  const navigation = useNavigation();
 
   const [isFontsLoaded] = useFonts({
     TechnicBold: require('./assets/fonts/TechnicBold.ttf'),

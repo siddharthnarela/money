@@ -5,7 +5,7 @@ import { useFonts } from 'expo-font';
 import { useNavigation } from '@react-navigation/native';
 import styles from './styles/styles';
 
-export default function Start() {
+export default function Start( ) {
   const [loaded] = useFonts({
     // TechnicBold: require('./assets/fonts/TechnicBold.ttf'),
   });
