@@ -4,7 +4,6 @@ import { View, Text, Animated, StyleSheet, Pressable } from 'react-native';
 import { useFonts } from 'expo-font';
 import styles from './styles/styles';
 import { useNavigation } from '@react-navigation/native';
-import Login from './login';
 import 'react-native-gesture-handler';
 
 export default function Home() {

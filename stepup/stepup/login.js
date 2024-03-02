@@ -1,9 +1,11 @@
+//login.js
 import React, { useState, forwardRef } from 'react';
 import { View, Text, Image, TouchableOpacity, TextInput, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
 import { useFonts } from 'expo-font';
 import Toast from 'react-native-toast-message';
 import { useNavigation } from '@react-navigation/native';
 import styles from './styles/styles_log';
+import profile from './profile';
 
 
 export default function Start() {
@@ -31,7 +33,7 @@ export default function Start() {
       });
     } else {
       try {
-        navigation.navigate('Home', { hideHeader: true });
+        navigation.navigate('Profile', { hideHeader: true });
       } catch (error) {
         console.error('Authentication Error:', error.message);
         Toast.show({

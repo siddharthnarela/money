@@ -1,3 +1,4 @@
+//start.js
 import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
@@ -6,7 +7,7 @@ import styles from './styles/styles';
 
 export default function Start() {
   const [loaded] = useFonts({
-    TechnicBold: require('./assets/fonts/TechnicBold.ttf'),
+    // TechnicBold: require('./assets/fonts/TechnicBold.ttf'),
   });
 
   const navigation = useNavigation();
@@ -14,7 +15,7 @@ export default function Start() {
   if (!loaded) {
     return null;
   }
-6
+
   const handleButtonPress = () => {
     navigation.navigate('Home1', { hideHeader: true });
   };

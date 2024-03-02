@@ -4,6 +4,7 @@ import { useFonts } from 'expo-font';
 import Toast from 'react-native-toast-message';
 import { useNavigation } from '@react-navigation/native';
 import styles from './styles/styles_sign';
+import Profile from './profile';
 
 export default function Signup() {
   const [loaded] = useFonts({
