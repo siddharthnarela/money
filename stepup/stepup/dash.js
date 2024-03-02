@@ -72,6 +72,7 @@ export default function Dash({ route }) {
     <Text style={styles.addMoneyButtonText}>Add Money</Text>
   </TouchableOpacity>
 </View>
+<Text style={styles.textexp}>Add Expense!</Text>
           </View>
         </View>
     </ScrollView>

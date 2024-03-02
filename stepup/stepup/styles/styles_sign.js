@@ -13,6 +13,8 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     fontWeight: 'bold',
   },
+
+
   text1: {
     fontSize: 15,
     marginLeft: 30,

@@ -11,6 +11,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 
+  textexp: {
+    fontSize: 20,
+    marginLeft: 30,
+    marginTop: 25,
+    fontWeight: 'bold',
+  },
+
   text1: {
     fontSize: 15,
     marginTop: 6,
