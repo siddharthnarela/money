@@ -118,7 +118,7 @@ if (!isFontsLoaded) {
 }
 
 return (
-  <ScrollView style={styles.scrollContainer}>
+  <ScrollView style={[styles.scrollContainer, { backgroundColor: '#FFFFFF' }]}>
     <View style={[styles.Imgcontainer, { marginVertical: isFocused ? 20 : 0 }]}>
       <View style={styles.container}>
         <Text style={styles.text}>Welcome Aditya!</Text>

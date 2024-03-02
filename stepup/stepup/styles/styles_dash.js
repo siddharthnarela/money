@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1, 
+    paddingTop: 20,
   },
 
   text: {
@@ -83,7 +84,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     width: '85%',
     borderRadius: 15,
-    backgroundColor: '#F2FFFE',
+    backgroundColor: '#F0F0F0',
   },
 
   porttext: {
@@ -125,7 +126,7 @@ amountInput: {
 },
 addMoneyButton: {
   backgroundColor: '#4CAF50',
-  width:"30%",
+  width:"40%",
   padding: 10,
   borderRadius: 25,
   marginTop: 22,
@@ -136,6 +137,50 @@ addMoneyButtonText: {
   color: 'white',
   fontSize: 16,
 },
+
+credits_card: {
+  width: '47%',
+  height: 140,
+  borderRadius: 22,
+},
+
+credits: {
+  color: 'white',
+  fontSize: 16,
+  marginLeft: 25,
+  marginTop: 20,
+  fontWeight: 'bold',
+},
+creditsval: {
+  color: 'white',
+  fontSize: 32,
+  marginLeft: 25,
+  marginTop: 6,
+  fontWeight: 'bold',
+},
+
+modules_card: {
+  width: '47%',
+  height: 140,
+  borderRadius: 22,
+},
+
+modules: {
+  color: 'white',
+  fontSize: 16,
+  marginLeft: 25,
+  marginTop: 20,
+  fontWeight: 'bold',
+},
+
+modulesval: {
+  color: 'white',
+  fontSize: 32,
+  marginLeft: 25,
+  marginTop: 6,
+  fontWeight: 'bold',
+},
+
 });
 
 export default styles;

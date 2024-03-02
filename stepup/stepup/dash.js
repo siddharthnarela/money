@@ -16,10 +16,9 @@ export default function Dash({ route }) {
   });
 
   const [enteredAmount, setEnteredAmount] = useState('');
-  const [currentBalance, setCurrentBalance] = useState(32341.59); // Initial balance, replace with your actual initial balance
+  const [currentBalance, setCurrentBalance] = useState(0.0);
 
   useEffect(() => {
-    // Add logic or side effects here
   }, [isFontsLoaded]);
 
   const handleAddMoney = () => {
@@ -41,12 +40,44 @@ export default function Dash({ route }) {
     navigation.navigate('Profile', { updatedBalance: newBalance });
   };
 
+  const handleAddExpense = () => {
+    if (!enteredAmount || isNaN(enteredAmount)) {
+      // Display a toast message for no input on amount
+      Toast.show({
+        type: 'error',
+        text1: 'Error',
+        text2: 'Please enter a valid amount',
+      });
+      return;
+    }
+
+    const expenseAmount = parseFloat(enteredAmount);
+    if (expenseAmount > currentBalance) {
+      // Display a toast message for insufficient balance
+      Toast.show({
+        type: 'error',
+        text1: 'Error',
+        text2: 'Insufficient balance',
+      });
+      return;
+    }
+
+    const newBalance = parseFloat(currentBalance) - expenseAmount;
+    setCurrentBalance(newBalance);
+    setEnteredAmount('');
+
+    // You can add additional logic here, e.g., save the expense transaction
+
+    // Optionally, you can also update the balance in the Profile screen using navigation params
+    navigation.navigate('Profile', { updatedBalance: newBalance });
+  };
+
   if (!isFontsLoaded) {
     return null;
   }
 
   return (
-    <ScrollView style={styles.scrollContainer}>
+    <ScrollView style={[styles.scrollContainer, { backgroundColor: '#FFFFFF' }]}>
       <View style={[styles.Imgcontainer, { marginVertical: isFocused ? 20 : 0 }]}>
         <View style={styles.container}>
           <View style={styles.portcard}>
@@ -66,15 +97,19 @@ export default function Dash({ route }) {
               value={enteredAmount}
               onChangeText={(text) => setEnteredAmount(text)}
             />
-            </View>
-            <View style={styles.buttonContainer}>
-  <TouchableOpacity style={styles.addMoneyButton} onPress={handleAddMoney}>
-    <Text style={styles.addMoneyButtonText}>Add Money</Text>
-  </TouchableOpacity>
-</View>
-<Text style={styles.textexp}>Add Expense!</Text>
+          </View>
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity style={styles.addMoneyButton} onPress={handleAddMoney}>
+              <Text style={styles.addMoneyButtonText}>Add Income</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity style={styles.addMoneyButton} onPress={handleAddExpense}>
+              <Text style={styles.addMoneyButtonText}>Add Expense</Text>
+            </TouchableOpacity>
           </View>
         </View>
+      </View>
     </ScrollView>
   );
 }
