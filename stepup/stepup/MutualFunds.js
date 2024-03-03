@@ -162,7 +162,7 @@ export default function Dash() {
       </LinearGradient>
       <LinearGradient
         colors={['#1E1E1E', '#7B3626']}
-        style={styles.stockcard}
+        style={styles.stockcardl}
       >
         <Text style={styles.stockname}>Vanguard Small Cap Index</Text>
         <Text style={styles.price}>INR 105.27</Text>

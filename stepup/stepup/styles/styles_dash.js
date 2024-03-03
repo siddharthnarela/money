@@ -170,7 +170,7 @@ modules: {
   color: 'white',
   fontSize: 16,
   marginLeft: 25,
-  marginTop: 20,
+  marginTop: 2,
   fontWeight: 'bold',
 },
 

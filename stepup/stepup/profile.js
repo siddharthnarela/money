@@ -129,7 +129,7 @@ return (
         <Text style={styles.text1}>Hope You are having a good day!</Text>
         <View style={styles.balancecard}>
           <Text style={styles.balancetext}>Account Balance</Text>
-          <Text style={styles.balance}>${currentBalance.toFixed(2)}</Text>
+          <Text style={styles.balance}>Rs {currentBalance.toFixed(2)}</Text>
         </View>
           <Text style={styles.space}></Text>
           <Text style={styles.text}>Recent Stats!</Text>

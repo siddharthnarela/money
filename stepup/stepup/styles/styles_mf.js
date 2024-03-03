@@ -14,6 +14,16 @@ stockcard: {
     marginTop: 15, 
   },
 
+  stockcardl: {
+    height: "auto",
+    alignSelf: 'center',
+    width: '85%',
+    borderRadius: 21,
+    backgroundColor: 'black',
+    marginTop: 15,
+    marginBottom: 15, 
+  },
+
   Name: {
     color: 'black',
     fontSize: 16,

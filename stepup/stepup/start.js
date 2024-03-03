@@ -7,7 +7,6 @@ import styles from './styles/styles';
 
 export default function Start( ) {
   const [loaded] = useFonts({
-    // TechnicBold: require('./assets/fonts/TechnicBold.ttf'),
   });
 
   const navigation = useNavigation();
