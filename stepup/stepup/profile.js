@@ -115,6 +115,11 @@ const handleButtonPress = () => {
 if (!isFontsLoaded) {
   return null;
 }
+const handleRedirect = (screen) => {
+  if (screen === 'History') {
+    navigation.navigate('History', { history });
+  }
+};
 
 return (
   <ScrollView style={[styles.scrollContainer, { backgroundColor: '#FFFFFF' }]}>

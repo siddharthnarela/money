@@ -5,7 +5,9 @@ import { LinearGradient } from 'expo-linear-gradient';
 import styles from './styles/styles_dash';
 import { useIsFocused } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
+import { SvgXml } from 'react-native-svg';
 import Toast from 'react-native-toast-message';
+
 
 export default function Dash({ route }) {
   const isFocused = useIsFocused();
@@ -21,11 +23,12 @@ export default function Dash({ route }) {
   }, [isFontsLoaded]);
 
   const BankIcon = `
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="logout"><path d="M12.59,13l-2.3,2.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l4-4a1,1,0,0,0,.21-.33,1,1,0,0,0,0-.76,1,1,0,0,0-.21-.33l-4-4a1,1,0,1,0-1.42,1.42L12.59,11H3a1,1,0,0,0,0,2ZM12,2A10,10,0,0,0,3,7.55a1,1,0,0,0,1.8.9A8,8,0,1,1,12,20a7.93,7.93,0,0,1-7.16-4.45,1,1,0,0,0-1.8.9A10,10,0,1,0,12,2Z"></path></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24" id="Currency-Exchange--Streamline-Guidance"><desc>Currency Exchange Streamline Icon: https://streamlinehq.com</desc><path stroke="#000000" d="M12 9h-1a1 1 0 0 0 -1 1l0 0.375a1 1 0 0 0 0.72 0.96l2.56 0.747a1 1 0 0 1 0.72 0.96L14 14a1 1 0 0 1 -1 1l-1 0m0 -6h1a1 1 0 0 1 1 1v0.5M12 9V7.5m0 7.5 -1 0a1 1 0 0 1 -1 -1v-0.5m2 1.5v1.5M1 3h12a8 8 0 0 1 8 8M1 3c0.41 0 0.99 -0.247 1.41 -0.503a5.633 5.633 0 0 0 1.458 -1.305C4.186 0.792 4.5 0.318 4.5 0M1 3c0.41 0 0.99 0.247 1.41 0.503a5.64 5.64 0 0 1 1.458 1.305c0.318 0.4 0.632 0.874 0.632 1.192M23 21l-12 0a8 8 0 0 1 -8 -8m20 8c-0.41 0 -0.99 0.247 -1.41 0.503a5.636 5.636 0 0 0 -1.458 1.305c-0.318 0.4 -0.632 0.874 -0.632 1.192m3.5 -3c-0.41 0 -0.99 -0.247 -1.41 -0.503a5.636 5.636 0 0 1 -1.458 -1.305c-0.318 -0.4 -0.632 -0.874 -0.632 -1.192M18 12a6 6 0 1 0 -12 0 6 6 0 0 0 12 0Z" stroke-width="1"></path></svg>
+
+
 `;
   const handleAddMoney = () => {
     if (!enteredAmount || isNaN(enteredAmount)) {
-      // Display a toast message for no input on amount
       Toast.show({
         type: 'error',
         text1: 'Error',
@@ -82,11 +85,12 @@ export default function Dash({ route }) {
     <ScrollView style={[styles.scrollContainer, { backgroundColor: '#FFFFFF' }]}>
       <View style={styles.cardscontainer}>
             <LinearGradient
-              colors={['#677', 'black']}
+              colors={['#477', 'lightgreen']}
               style={styles.credits_card}
             >
-              <Text style={styles.credits}>Credits     Available</Text>
-              <Text style={styles.creditsval}>321</Text>
+              <SvgXml xml={BankIcon} width="40" height="40" fill="#fff" outline="fff" style={{ margin: 10, marginLeft:25, marginTop:22, alignSelf:"left" }} />
+              <Text style={styles.profit}>Profit    Percentage</Text>
+              <Text style={styles.profitpercent}>3.21%</Text>
             </LinearGradient>
             <LinearGradient
               colors={['#677', 'black']}

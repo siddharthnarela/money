@@ -144,14 +144,14 @@ credits_card: {
   borderRadius: 22,
 },
 
-credits: {
+profit: {
   color: 'white',
   fontSize: 16,
   marginLeft: 25,
-  marginTop: 20,
+  marginTop: 0,
   fontWeight: 'bold',
 },
-creditsval: {
+profitpercent: {
   color: 'white',
   fontSize: 32,
   marginLeft: 25,

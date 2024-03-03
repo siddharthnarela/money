@@ -11,6 +11,9 @@ import Policy from './policy';
 import Dash from './dash';
 import TopTabNavigator from './TopTabNavigator';
 import TopTabs from './TopTabs';
+import MutualFunds from './MutualFunds'
+
+import { initializeApp } from '@react-native-firebase/app';
 
 const Stack = createStackNavigator();
 
@@ -87,6 +90,11 @@ export default function App() {
           />
           <Stack.Screen
             name="Profile"
+            component={TopTabs}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="MutualFunds"
             component={TopTabs}
             options={{ headerShown: false }}
           />
