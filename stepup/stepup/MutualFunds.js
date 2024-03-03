@@ -7,11 +7,15 @@ import styles from './styles/styles_mf';
 import { useIsFocused } from '@react-navigation/native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import 'react-native-gesture-handler';
+import Dash from './dash';
 
-export default function Dash() {
-  const isFocused = useIsFocused();
-  const navigation = useNavigation();
-  const route = useRoute();
+export default function MutualFunds({ onAddMF }) {
+  const handleAddMF = () => {
+    
+    if (onAddMF) {
+      onAddMF();
+    }
+  };
 
   const [isFontsLoaded] = useFonts({
   });
