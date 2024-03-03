@@ -88,7 +88,7 @@ export default function Dash() {
         <Text style={styles.price}>INR 46.99</Text>
         <Text style={styles.text}>1.74% YTD</Text>
         <Text style={styles.text}>-0.13%</Text>
-        <Text style={[styles.risk, { color: '#FC6161' }]}>Yes Risky</Text>
+        <Text style={styles.risk}>No Risks</Text>
       </LinearGradient>
       <LinearGradient
         colors={['#2F4F4F', '#483D8B']}
@@ -108,7 +108,7 @@ export default function Dash() {
         <Text style={styles.price}>INR 44.48</Text>
         <Text style={styles.text}>0.93% YTD</Text>
         <Text style={styles.text}>+0.11%</Text>
-        <Text style={[styles.risk, { color: '#FC6161' }]}>Yes Risky</Text>
+        <Text style={styles.risk}>No Risks</Text>
       </LinearGradient>
       <LinearGradient
         colors={['#1E1E1E', '#556B2F']}
@@ -129,6 +129,36 @@ export default function Dash() {
         <Text style={styles.text}>0.60% YTD</Text>
         <Text style={styles.text}>+0.01%</Text>
         <Text style={styles.risk}>No Risks</Text>
+      </LinearGradient>
+      <LinearGradient
+        colors={['#1E1E1E', '#6C0202']}
+        style={styles.stockcard}
+      >
+        <Text style={styles.stockname}>PIMCO Income Fund</Text>
+        <Text style={styles.price}>INR 10.52</Text>
+        <Text style={styles.text}>0.59% YTD</Text>
+        <Text style={styles.text}>+0.29%</Text>
+        <Text style={styles.risk}>No Risks</Text>
+      </LinearGradient>
+      <LinearGradient
+        colors={['#1E1E1E', '#6C0202']}
+        style={styles.stockcard}
+      >
+        <Text style={styles.stockname}>Nippon India Money Market</Text>
+        <Text style={styles.price}>INR 3,791.92</Text>
+        <Text style={styles.text}>0.65% YTD</Text>
+        <Text style={styles.text}>+0.03%</Text>
+        <Text style={styles.risk}>No Risks</Text>
+      </LinearGradient>
+      <LinearGradient
+        colors={['#1E1E1E', '#6C0202']}
+        style={styles.stockcard}
+      >
+        <Text style={styles.stockname}>Vanguard Mid Cap Index Investor</Text>
+        <Text style={styles.price}>INR 65.84</Text>
+        <Text style={styles.text}>-1.50% YTD</Text>
+        <Text style={styles.text}>+0.64%</Text>
+        <Text style={[styles.risk, { color: '#FC6161' }]}>Yes Risky</Text>
       </LinearGradient>
       <LinearGradient
         colors={['#1E1E1E', '#6C0202']}
