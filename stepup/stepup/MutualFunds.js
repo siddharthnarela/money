@@ -141,7 +141,7 @@ export default function Dash() {
         <Text style={styles.risk}>No Risks</Text>
       </LinearGradient>
       <LinearGradient
-        colors={['#1E1E1E', '#6C0202']}
+        colors={['#1E1E1E', '#703E69']}
         style={styles.stockcard}
       >
         <Text style={styles.stockname}>Nippon India Money Market</Text>
@@ -151,23 +151,23 @@ export default function Dash() {
         <Text style={styles.risk}>No Risks</Text>
       </LinearGradient>
       <LinearGradient
-        colors={['#1E1E1E', '#6C0202']}
+        colors={['#1E1E1E', '#3E3378']}
         style={styles.stockcard}
       >
-        <Text style={styles.stockname}>Vanguard Mid Cap Index Investor</Text>
-        <Text style={styles.price}>INR 65.84</Text>
-        <Text style={styles.text}>-1.50% YTD</Text>
-        <Text style={styles.text}>+0.64%</Text>
-        <Text style={[styles.risk, { color: '#FC6161' }]}>Yes Risky</Text>
+        <Text style={styles.stockname}>American Funds New Perspective F1</Text>
+        <Text style={styles.price}>INR 58.54</Text>
+        <Text style={styles.text}>0.41% YTD</Text>
+        <Text style={styles.text}>+1.20%</Text>
+        <Text style={styles.risk}>No Risks</Text>
       </LinearGradient>
       <LinearGradient
-        colors={['#1E1E1E', '#6C0202']}
+        colors={['#1E1E1E', '#7B3626']}
         style={styles.stockcard}
       >
-        <Text style={styles.stockname}>Vanguard Mid Cap Index Institutional</Text>
-        <Text style={styles.price}>INR 65.84</Text>
-        <Text style={styles.text}>0.60% YTD</Text>
-        <Text style={styles.text}>-1.49%</Text>
+        <Text style={styles.stockname}>Vanguard Small Cap Index</Text>
+        <Text style={styles.price}>INR 105.27</Text>
+        <Text style={styles.text}>-2.63% YTD</Text>
+        <Text style={styles.text}>+0.74%	</Text>
         <Text style={[styles.risk, { color: '#FC6161' }]}>Yes Risky</Text>
       </LinearGradient>
       
