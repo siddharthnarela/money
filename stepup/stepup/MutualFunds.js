@@ -101,14 +101,44 @@ export default function Dash() {
         <Text style={styles.risk}>No Risks</Text>
       </LinearGradient>
       <LinearGradient
-        colors={['#2F4F4F', '#483D8B']}
+        colors={['#1E1E1E', '#2F4F4F']}
         style={styles.stockcard}
       >
         <Text style={styles.stockname}>SBI Life-Bond</Text>
-        <Text style={styles.price}>INR 69.03</Text>
-        <Text style={styles.text}>+1.35% YTD</Text>
-        <Text style={styles.text}>1.77%	</Text>
+        <Text style={styles.price}>INR 44.48</Text>
+        <Text style={styles.text}>0.93% YTD</Text>
+        <Text style={styles.text}>+0.11%</Text>
+        <Text style={[styles.risk, { color: '#FC6161' }]}>Yes Risky</Text>
+      </LinearGradient>
+      <LinearGradient
+        colors={['#1E1E1E', '#556B2F']}
+        style={styles.stockcard}
+      >
+        <Text style={styles.stockname}>SBI Life-Equity</Text>
+        <Text style={styles.price}>INR 178.27</Text>
+        <Text style={styles.text}>1.30% YTD</Text>
+        <Text style={styles.text}>+1.46%</Text>
         <Text style={styles.risk}>No Risks</Text>
+      </LinearGradient>
+      <LinearGradient
+        colors={['#1E1E1E', '#31026C']}
+        style={styles.stockcard}
+      >
+        <Text style={styles.stockname}>Tata Treasury Advantage</Text>
+        <Text style={styles.price}>INR 3,561.09</Text>
+        <Text style={styles.text}>0.60% YTD</Text>
+        <Text style={styles.text}>+0.01%</Text>
+        <Text style={styles.risk}>No Risks</Text>
+      </LinearGradient>
+      <LinearGradient
+        colors={['#1E1E1E', '#6C0202']}
+        style={styles.stockcard}
+      >
+        <Text style={styles.stockname}>Vanguard Mid Cap Index Institutional</Text>
+        <Text style={styles.price}>INR 65.84</Text>
+        <Text style={styles.text}>0.60% YTD</Text>
+        <Text style={styles.text}>-1.49%</Text>
+        <Text style={[styles.risk, { color: '#FC6161' }]}>Yes Risky</Text>
       </LinearGradient>
       
 
