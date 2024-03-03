@@ -98,6 +98,11 @@ export default function App() {
             component={TopTabs}
             options={{ headerShown: false }}
           />
+          <Stack.Screen
+            name="Copilot"
+            component={TopTabs}
+            options={{ headerShown: false }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>

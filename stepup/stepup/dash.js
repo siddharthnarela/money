@@ -7,6 +7,7 @@ import { useIsFocused } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
 import { SvgXml } from 'react-native-svg';
 import Toast from 'react-native-toast-message';
+import MutualFunds from './MutualFunds'; 
 
 export default function Dash({ route }) {
   const isFocused = useIsFocused();
@@ -18,6 +19,9 @@ export default function Dash({ route }) {
   const [totalIncome, setTotalIncome] = useState(0.0);
   const [totalExpense, setTotalExpense] = useState(0.0);
   const [profitPercentage, setProfitPercentage] = useState(0.0);
+  const handleAddMF = () => {
+    setCurrentlyInvestedMFs((prevInvestedMFs) => prevInvestedMFs + 1);
+  };
 
   useEffect(() => {}, [isFontsLoaded]);
 
@@ -116,7 +120,7 @@ export default function Dash({ route }) {
     outline="fff"
     style={{ margin: 10, marginLeft: 25, marginTop: 22, alignSelf: 'left' }}
   />
-  <Text style={styles.modules}>Currently Invested MFs</Text>
+  <Text style={styles.modules}>Currently  Invested MFs</Text>
   <Text style={styles.modulesval}>{currentlyInvestedMFs}</Text>
 </LinearGradient>
       </View>
@@ -130,7 +134,7 @@ export default function Dash({ route }) {
             <Text style={styles.portmod}>Current Holdings: None</Text>
           </View>
           <Text style={styles.space}></Text>
-          <Text style={styles.text}>Add Money!</Text>
+          <Text style={styles.text}>Money Tracker!</Text>
           <View style={styles.cardscontainer}>
             <TextInput
               style={styles.amountInput}

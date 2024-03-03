@@ -3,23 +3,16 @@ import { View, Text, ScrollView, TextInput, TouchableOpacity } from 'react-nativ
 import { useFonts } from 'expo-font';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Feather } from '@expo/vector-icons';
-import styles from './styles/styles_mf';
-import { useIsFocused } from '@react-navigation/native';
-import { useNavigation, useRoute } from '@react-navigation/native';
+import { useIsFocused, useNavigation, useRoute } from '@react-navigation/native';
 import 'react-native-gesture-handler';
-import Dash from './dash';
+import styles from './styles/styles_mf';
 
 export default function MutualFunds({ onAddMF }) {
-  const handleAddMF = () => {
-    
-    if (onAddMF) {
-      onAddMF();
-    }
-  };
+  const isFocused = useIsFocused();
+  const navigation = useNavigation();
+  const route = useRoute();
 
-  const [isFontsLoaded] = useFonts({
-  });
-
+  const [isFontsLoaded] = useFonts({});
   const [currentBalance, setCurrentBalance] = useState(0);
 
   useEffect(() => {
@@ -33,19 +26,22 @@ export default function MutualFunds({ onAddMF }) {
     console.log('Button pressed!');
   };
 
-  if (!isFontsLoaded) {
-    return null;
-  }
-
   const handleRedirect = (screen) => {
     if (screen === 'History') {
       navigation.navigate('History', { history });
     }
   };
 
+  const handleAddMF = () => {
+    if (onAddMF) {
+      onAddMF();
+    }
+  };
+
+
   return (
     <ScrollView>
-    <Text style={styles.Name}>Sample Card Format</Text>
+      <Text style={styles.Name}>Sample Card Format</Text>
       <LinearGradient
         colors={['#333', '#111']}
         style={styles.stockcard}
@@ -76,9 +72,9 @@ export default function MutualFunds({ onAddMF }) {
         <Text style={styles.text}>1.12%	YTD</Text>
         <Text style={styles.text}>+0.80%</Text>
         <Text style={styles.risk}>No Risks</Text>
-        <TouchableOpacity style={styles.plusButton}>
-      <Feather name="plus" size={24} color="white" />
-    </TouchableOpacity>
+        <TouchableOpacity style={styles.plusButton} onPress={handleAddMF}>
+          <Feather name="plus" size={24} color="white" />
+        </TouchableOpacity>
       </LinearGradient>
       <LinearGradient
         colors={['#4A4A4A', '#2F4F4F']}
