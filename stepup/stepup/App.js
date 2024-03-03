@@ -14,6 +14,7 @@ import TopTabs from './TopTabs';
 import MutualFunds from './MutualFunds'
 
 import { initializeApp } from '@react-native-firebase/app';
+import AboutUs from './aboutus';
 
 const Stack = createStackNavigator();
 
@@ -101,6 +102,11 @@ export default function App() {
           <Stack.Screen
             name="Copilot"
             component={TopTabs}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Aboutus"
+            component={AboutUs}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

@@ -8,6 +8,7 @@ import { useIsFocused } from '@react-navigation/native';
 import { SvgXml } from 'react-native-svg';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import 'react-native-gesture-handler';
+import AboutUs from './aboutus';
 
 export default function Dash() {
   const isFocused = useIsFocused();
@@ -97,11 +98,9 @@ const EditIcon = `
 `;
 
 const [isFontsLoaded] = useFonts({
-  // Add your font imports here
 });
 
-const [currentBalance, setCurrentBalance] = useState(0); // Set initial balance to 0
-
+const [currentBalance, setCurrentBalance] = useState(0);
 useEffect(() => {
   if (route.params?.updatedBalance !== undefined) {
     setCurrentBalance(route.params.updatedBalance);
@@ -112,6 +111,11 @@ const handleButtonPress = () => {
   navigation.navigate('Start', { hideHeader: true });
   console.log('Button pressed!');
 };
+
+const handleButtonPress2 = () => {
+  navigation.navigate('Aboutus', { hideHeader: true });
+  };
+  
 
 if (!isFontsLoaded) {
   return null;
@@ -153,6 +157,16 @@ return (
           <View style={styles.redirectorsContainer}>
           <TouchableHighlight
               underlayColor="#d3d3d3"
+              onPress={handleButtonPress2}
+              style={styles.redirector}
+            >
+              <>
+              <SvgXml xml={supportIcon} width="24" height="20" fill="#000000" style={{ marginLeft: 10 }} />
+                <Text style={styles.redirectorText}>Our Team</Text>
+              </>
+            </TouchableHighlight>
+          <TouchableHighlight
+              underlayColor="#d3d3d3"
               onPress={() => handleRedirect('EditProfile')}
               style={styles.redirector}
             >
@@ -190,16 +204,6 @@ return (
               <>
               <SvgXml xml={settingsIcon} width="24" height="24" fill="#000000" style={{ marginLeft: 10 }} />
                 <Text style={styles.redirectorText}>Settings</Text>
-              </>
-            </TouchableHighlight>
-            <TouchableHighlight
-              underlayColor="#d3d3d3"
-              onPress={() => handleRedirect('Support')}
-              style={styles.redirector}
-            >
-              <>
-              <SvgXml xml={supportIcon} width="24" height="20" fill="#000000" style={{ marginLeft: 10 }} />
-                <Text style={styles.redirectorText}>Support</Text>
               </>
             </TouchableHighlight>
             <TouchableHighlight

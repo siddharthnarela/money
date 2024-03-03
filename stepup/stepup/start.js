@@ -16,8 +16,8 @@ export default function Start( ) {
   }
 
   const handleButtonPress = () => {
-    navigation.navigate('Home1', { hideHeader: true });
-  };
+      navigation.navigate('Home1', { hideHeader: true });
+    };
 
   return (
     <View style={styles.container}>
