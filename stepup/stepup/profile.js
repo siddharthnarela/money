@@ -162,7 +162,7 @@ return (
             >
               <>
               <SvgXml xml={supportIcon} width="24" height="20" fill="#000000" style={{ marginLeft: 10 }} />
-                <Text style={styles.redirectorText}>Our Team</Text>
+                <Text style={styles.redirectorText}>AboutUs</Text>
               </>
             </TouchableHighlight>
           <TouchableHighlight

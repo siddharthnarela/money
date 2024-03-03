@@ -107,7 +107,7 @@ export default function App() {
           <Stack.Screen
             name="Aboutus"
             component={AboutUs}
-            options={{ headerShown: false }}
+            options={{ headerShown: true }}
           />
         </Stack.Navigator>
       </NavigationContainer>
