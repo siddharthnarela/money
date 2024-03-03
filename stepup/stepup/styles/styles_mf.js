@@ -94,6 +94,15 @@ text: {
     tintColor: '#666',
   },
 
+  plusButton: {
+    position: 'absolute',
+    bottom: 10,
+    right: 10,
+    backgroundColor: '#1B1B1B', 
+    padding: 10,
+    borderRadius: 20,
+  },
+
 });
 
 export default styles;

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, ScrollView, TextInput } from 'react-native';
+import { View, Text, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
 import { LinearGradient } from 'expo-linear-gradient';
+import { Feather } from '@expo/vector-icons';
 import styles from './styles/styles_mf';
 import { useIsFocused } from '@react-navigation/native';
 import { useNavigation, useRoute } from '@react-navigation/native';
@@ -13,7 +14,6 @@ export default function Dash() {
   const route = useRoute();
 
   const [isFontsLoaded] = useFonts({
-    // Add your font imports here
   });
 
   const [currentBalance, setCurrentBalance] = useState(0);
@@ -51,6 +51,9 @@ export default function Dash() {
         <Text style={styles.text}>1 Year Return</Text>
         <Text style={styles.text}>Growth</Text>
         <Text style={styles.risk}>Risks</Text>
+        <TouchableOpacity style={styles.plusButton}>
+      <Feather name="plus" size={24} color="white" />
+    </TouchableOpacity>
       </LinearGradient>
 
       <View style={styles.searchBarContainer}>
@@ -59,7 +62,7 @@ export default function Dash() {
           placeholder="Search..."
         />
       </View>
-      <Text style={styles.Name}>Mutual Funds</Text>
+      <Text style={styles.Name}>Top Mutual Funds</Text>
       <LinearGradient
         colors={['#2C3E50', '#34495E']}
         style={styles.stockcard}
@@ -69,6 +72,9 @@ export default function Dash() {
         <Text style={styles.text}>1.12%	YTD</Text>
         <Text style={styles.text}>+0.80%</Text>
         <Text style={styles.risk}>No Risks</Text>
+        <TouchableOpacity style={styles.plusButton}>
+      <Feather name="plus" size={24} color="white" />
+    </TouchableOpacity>
       </LinearGradient>
       <LinearGradient
         colors={['#4A4A4A', '#2F4F4F']}
@@ -79,6 +85,9 @@ export default function Dash() {
         <Text style={styles.text}>1.74% YTD</Text>
         <Text style={styles.text}>+0.55%</Text>
         <Text style={styles.risk}>No Risks</Text>
+        <TouchableOpacity style={styles.plusButton}>
+      <Feather name="plus" size={24} color="white" />
+    </TouchableOpacity>
       </LinearGradient>
       <LinearGradient
         colors={['#383838', '#34495E']}
@@ -89,6 +98,9 @@ export default function Dash() {
         <Text style={styles.text}>1.74% YTD</Text>
         <Text style={styles.text}>-0.13%</Text>
         <Text style={styles.risk}>No Risks</Text>
+        <TouchableOpacity style={styles.plusButton}>
+      <Feather name="plus" size={24} color="white" />
+    </TouchableOpacity>
       </LinearGradient>
       <LinearGradient
         colors={['#2F4F4F', '#483D8B']}
@@ -99,6 +111,9 @@ export default function Dash() {
         <Text style={styles.text}>+1.35% YTD</Text>
         <Text style={styles.text}>1.77%	</Text>
         <Text style={styles.risk}>No Risks</Text>
+        <TouchableOpacity style={styles.plusButton}>
+      <Feather name="plus" size={24} color="white" />
+    </TouchableOpacity>
       </LinearGradient>
       <LinearGradient
         colors={['#1E1E1E', '#2F4F4F']}
@@ -109,6 +124,9 @@ export default function Dash() {
         <Text style={styles.text}>0.93% YTD</Text>
         <Text style={styles.text}>+0.11%</Text>
         <Text style={styles.risk}>No Risks</Text>
+        <TouchableOpacity style={styles.plusButton}>
+      <Feather name="plus" size={24} color="white" />
+    </TouchableOpacity>
       </LinearGradient>
       <LinearGradient
         colors={['#1E1E1E', '#556B2F']}
@@ -119,6 +137,9 @@ export default function Dash() {
         <Text style={styles.text}>1.30% YTD</Text>
         <Text style={styles.text}>+1.46%</Text>
         <Text style={styles.risk}>No Risks</Text>
+        <TouchableOpacity style={styles.plusButton}>
+      <Feather name="plus" size={24} color="white" />
+    </TouchableOpacity>
       </LinearGradient>
       <LinearGradient
         colors={['#1E1E1E', '#31026C']}
@@ -129,6 +150,9 @@ export default function Dash() {
         <Text style={styles.text}>0.60% YTD</Text>
         <Text style={styles.text}>+0.01%</Text>
         <Text style={styles.risk}>No Risks</Text>
+        <TouchableOpacity style={styles.plusButton}>
+      <Feather name="plus" size={24} color="white" />
+    </TouchableOpacity>
       </LinearGradient>
       <LinearGradient
         colors={['#1E1E1E', '#6C0202']}
@@ -139,6 +163,9 @@ export default function Dash() {
         <Text style={styles.text}>0.59% YTD</Text>
         <Text style={styles.text}>+0.29%</Text>
         <Text style={styles.risk}>No Risks</Text>
+        <TouchableOpacity style={styles.plusButton}>
+      <Feather name="plus" size={24} color="white" />
+    </TouchableOpacity>
       </LinearGradient>
       <LinearGradient
         colors={['#1E1E1E', '#703E69']}
@@ -149,6 +176,9 @@ export default function Dash() {
         <Text style={styles.text}>0.65% YTD</Text>
         <Text style={styles.text}>+0.03%</Text>
         <Text style={styles.risk}>No Risks</Text>
+        <TouchableOpacity style={styles.plusButton}>
+      <Feather name="plus" size={24} color="white" />
+    </TouchableOpacity>
       </LinearGradient>
       <LinearGradient
         colors={['#1E1E1E', '#3E3378']}
@@ -159,6 +189,48 @@ export default function Dash() {
         <Text style={styles.text}>0.41% YTD</Text>
         <Text style={styles.text}>+1.20%</Text>
         <Text style={styles.risk}>No Risks</Text>
+        <TouchableOpacity style={styles.plusButton}>
+      <Feather name="plus" size={24} color="white" />
+    </TouchableOpacity>
+      </LinearGradient>
+      <LinearGradient
+        colors={['#1E1E1E', '#31026C']}
+        style={styles.stockcard}
+      >
+        <Text style={styles.stockname}>Tata Treasury Advantage</Text>
+        <Text style={styles.price}>INR 3,561.09</Text>
+        <Text style={styles.text}>0.60% YTD</Text>
+        <Text style={styles.text}>+0.01%</Text>
+        <Text style={styles.risk}>No Risks</Text>
+        <TouchableOpacity style={styles.plusButton}>
+      <Feather name="plus" size={24} color="white" />
+    </TouchableOpacity>
+      </LinearGradient>
+      <LinearGradient
+        colors={['#1E1E1E', '#6C0202']}
+        style={styles.stockcard}
+      >
+        <Text style={styles.stockname}>PIMCO Income Fund</Text>
+        <Text style={styles.price}>INR 10.52</Text>
+        <Text style={styles.text}>0.59% YTD</Text>
+        <Text style={styles.text}>+0.29%</Text>
+        <Text style={styles.risk}>No Risks</Text>
+        <TouchableOpacity style={styles.plusButton}>
+      <Feather name="plus" size={24} color="white" />
+    </TouchableOpacity>
+      </LinearGradient>
+      <LinearGradient
+        colors={['#1E1E1E', '#703E69']}
+        style={styles.stockcard}
+      >
+        <Text style={styles.stockname}>Nippon India Money Market</Text>
+        <Text style={styles.price}>INR 3,791.92</Text>
+        <Text style={styles.text}>0.65% YTD</Text>
+        <Text style={styles.text}>+0.03%</Text>
+        <Text style={styles.risk}>No Risks</Text>
+        <TouchableOpacity style={styles.plusButton}>
+      <Feather name="plus" size={24} color="white" />
+    </TouchableOpacity>
       </LinearGradient>
       <LinearGradient
         colors={['#1E1E1E', '#7B3626']}
@@ -169,9 +241,10 @@ export default function Dash() {
         <Text style={styles.text}>-2.63% YTD</Text>
         <Text style={styles.text}>+0.74%	</Text>
         <Text style={[styles.risk, { color: '#FC6161' }]}>Yes Risky</Text>
+        <TouchableOpacity style={styles.plusButton}>
+      <Feather name="plus" size={24} color="white" />
+    </TouchableOpacity>
       </LinearGradient>
-      
-
     </ScrollView>
   );
 }

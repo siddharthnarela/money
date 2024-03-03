@@ -11,7 +11,7 @@ import Toast from 'react-native-toast-message';
 export default function Dash({ route }) {
   const isFocused = useIsFocused();
   const navigation = useNavigation();
-
+  const [currentlyInvestedMFs, setCurrentlyInvestedMFs] = useState(0);
   const [isFontsLoaded] = useFonts({});
   const [enteredAmount, setEnteredAmount] = useState('');
   const [currentBalance, setCurrentBalance] = useState(0.0);
@@ -40,18 +40,21 @@ export default function Dash({ route }) {
     }
 
     const incomeAmount = parseFloat(enteredAmount);
-    const newBalance = parseFloat(currentBalance) + incomeAmount;
-    setTotalIncome((prevTotalIncome) => prevTotalIncome + incomeAmount);
-    setCurrentBalance(newBalance);
-    setEnteredAmount('');
+  const newBalance = parseFloat(currentBalance) + incomeAmount;
+  setTotalIncome((prevTotalIncome) => prevTotalIncome + incomeAmount);
+  setCurrentBalance(newBalance);
+  setEnteredAmount('');
 
     // Calculate and update profit percentage
-    const profitPercentageValue = (totalIncome / totalExpense) * 100;
-    setProfitPercentage(isFinite(profitPercentageValue) ? profitPercentageValue : 0);
+  const profitPercentageValue = (totalIncome / totalExpense) * 100;
+  setProfitPercentage(isFinite(profitPercentageValue) ? profitPercentageValue : 0);
 
-    // Pass the updated balance and profit percentage to the Profile screen using navigation params
-    navigation.navigate('Profile', { updatedBalance: newBalance, profitPercentage });
-  };
+  // Increment currently invested MFs
+  setCurrentlyInvestedMFs((prevInvestedMFs) => prevInvestedMFs + 1);
+
+  // Pass the updated balance and profit percentage to the Profile screen using navigation params
+  navigation.navigate('Profile', { updatedBalance: newBalance, profitPercentage });
+};
 
   const handleAddExpense = () => {
     if (!enteredAmount || isNaN(enteredAmount)) {
@@ -104,18 +107,18 @@ export default function Dash({ route }) {
           <Text style={styles.profit}>Profit     Percentage</Text>
           <Text style={styles.profitpercent}>{profitPercentage.toFixed(1)}%</Text>
         </LinearGradient>
-        <LinearGradient colors={['#77', 'black']} style={styles.modules_card}>
-        <SvgXml
-            xml={MFIcon}
-            width="40"
-            height="40"
-            fill="#fff"
-            outline="fff"
-            style={{ margin: 10, marginLeft: 25, marginTop: 22, alignSelf: 'left' }}
-          />
-          <Text style={styles.modules}>Currently  Invested MFs</Text>
-          <Text style={styles.modulesval}> - </Text>
-        </LinearGradient>
+        <LinearGradient colors={['#677', 'black']} style={styles.modules_card}>
+  <SvgXml
+    xml={MFIcon}
+    width="40"
+    height="40"
+    fill="#fff"
+    outline="fff"
+    style={{ margin: 10, marginLeft: 25, marginTop: 22, alignSelf: 'left' }}
+  />
+  <Text style={styles.modules}>Currently Invested MFs</Text>
+  <Text style={styles.modulesval}>{currentlyInvestedMFs}</Text>
+</LinearGradient>
       </View>
       <View style={[styles.Imgcontainer, { marginVertical: isFocused ? 20 : 0 }]}>
         <View style={styles.container}>
